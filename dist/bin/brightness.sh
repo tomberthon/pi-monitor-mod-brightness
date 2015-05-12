@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function set_brightness {
-  echo "Redis: $DB_PORT_6379_TCP_ADDR $DB_PORT_6379_TCP_PORT";
+  echo "Redis: $REDIS_HOST $REDIS_PORT";
   bright_value=$(/opt/train-alerts/libs/redi.sh/redi.sh -g mod-brightness);
   
   echo "Brightness: $bright_value";
