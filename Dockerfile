@@ -25,4 +25,4 @@ RUN chmod +x /opt/train-alerts/bin/brightness.sh
 
 ## Docker env variables are not available via cron - set the values we need in the cron template
 
-CMD ./set_env.sh /opt/train-alerts/.env && echo "mod-brightness=256" | libs/redi.sh/redi.sh -H $DB_PORT_6379_TCP_ADDR && /usr/bin/crond -n && tail -f /var/log/cron.log
+CMD ./set_env.sh /opt/train-alerts/.env && echo "mod-brightness=256" | libs/redi.sh/redi.sh -H $DB_PORT_6379_TCP_ADDR && /usr/bin/crond -n

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -ti --link redis:db --privileged mod-brightness;
+docker run -d --name mod-brightness --link redis:db --privileged mod-brightness;
